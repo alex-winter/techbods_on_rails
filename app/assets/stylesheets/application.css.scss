@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+
+/*
+* SASS imports
+* 
+* 
+* 
+* 
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*
+* SASS Variables
+* 
+* 
+* 
+* 
+ */
+
+$nav-margin: 250px;
+$big-padding: 40px;
+$med-padding: 20px;
+$small-padding: 10px;
+
+$tb-darkgrey: #333;
+$tb-green: #009899;
+
+/*
+* HTML 5 tags
+* 
+* 
+* 
+* 
+ */
+
+body, html {
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0; margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/*
+* Side Navigation Panel
+* 
+* This is the styling for the side nav that contains the logo/heading, the navigation itself
+* and the settings and help navigation.
+* 
+ */
+
+.nav-container {
+	* {
+		color: #fff;
+	}
+	
+	float: left;
+	width: $nav-margin;
+	height: 100%;
+	background-color: $tb-darkgrey;
+	position: absolute;
+
+	header, nav, footer {
+		width: 100%;
+	}
+
+	.app-title {
+		padding-top: $med-padding; padding-bottom: $med-padding;
+		text-align: center;
+		font-weight: 100;
+		font-size: 3.0em;
+
+		&:hover {
+			background-color: #fff;
+		}
+	}
+
+	.nav li a,
+	.app-title {
+		&:hover {
+			color: $tb-green;
+			*{color: $tb-green;}
+		}
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+}
+
+/*
+* Main Container
+* 
+* This everything right of the navigation panel
+* 
+* 
+ */
+
+.main-container {
+
+	* {
+		color: $tb-darkgrey;
+	}
+
+	float: left;
+	width: -webkit-calc(100% - $nav-margin) -moz-calc(100% - $nav-margin) calc(100% - $nav-margin);
+	position: relative;
+	margin-left: $nav-margin;
+	padding: $med-padding;
+
+}
