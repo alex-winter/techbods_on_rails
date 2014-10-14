@@ -8,8 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <%= yield %>
+  <div class="nav-container">
+    <header>
+      <h1 class="app-title"><i class="fa fa-leaf"></i> Techs</h1>
+    </header>
+    <nav>
+      <ul class="nav">
+        <li><a href="#"><i class="fa fa-tachometer"></i>Dashboard</a></li>
+        <li><a href="#"><i class="fa fa-binoculars"></i>Job List</a></li>
+        <li><a href="#"><i class="fa fa-plus-square-o"></i>New Job</a></li>
+        <li><a href="#"><i class="fa fa-phone-square"></i>Call Logger</a></li>
+        <li><a href="#"><i class="fa fa-users"></i>Technicians</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <ul class="nav">
+        <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+        <li><a href="#"><i class="fa fa-question"></i> Help</a></li>
+      </ul>
+    </footer>
+  </div>
+  
+  <div class="main-container">
+    <%= yield %>
+  </div>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
